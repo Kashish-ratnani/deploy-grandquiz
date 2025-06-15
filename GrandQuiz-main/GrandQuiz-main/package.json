@@ -1,8 +1,8 @@
 {
-  "name": "my-app",
+  "name": "GrandQuiz-main",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://AukashaKhan.github.io/my-app",
+  "homepage": "https://Kashish-ratnani.github.io/GrandQuiz-main",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
