@@ -1,0 +1,31 @@
+name: Deploy the React App
+on:
+ push:
+   branches:
+        -main
+permissions:
+  contents: write
+jobs:
+    deploy:
+     - runs-on:ubuntu-latest
+steps:
+  -name: check out respository
+   uses: action/checkout@v3
+
+  -name: Set up Node.js
+    uses: action/node-app@v3
+
+   -name: Install Dependenices
+     uses: npm install
+      with:
+        version: 18
+
+    -name: Build the React App
+      uses: npm run build
+
+    -name: Deploy to the Github
+      uses: peracise/action-gh-pages@v3
+        with: 
+          Github_Tokens: ${{github_token.Deploy}} 
+          publish_dir: ./build
+  
